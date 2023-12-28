@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
   font-family: "Bungee", sans-serif;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
