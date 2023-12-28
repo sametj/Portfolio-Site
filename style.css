@@ -3,18 +3,24 @@
 html {
   scroll-behavior: smooth;
   font-family: "Bungee", sans-serif;
-  max-height: fit-content;
-  overflow-x: hidden;
 }
 a {
   text-decoration: none;
   color: red;
 }
+
+a:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
 body {
+  position: relative;
   background-image: linear-gradient(rgb(80, 17, 1), darkblue);
   background-repeat: repeat;
   background-attachment: fixed;
-  z-index: 1;
+  min-height: 200vh;
+  z-index: 0 !important;
 }
 .container {
   margin: 0 auto;
@@ -122,86 +128,31 @@ img {
   transform: translateZ(-50px);
 }
 
-.text-3D {
-  transition: transform 0.5s ease-out;
-  color: yellow;
-  text-shadow: 0 4px 10px black;
-}
 .about-me-title {
   font-size: 2rem;
   color: red;
   text-align: center;
   text-shadow: white 0 0 5px;
 }
-.text-3D:hover {
-  transform: scale(0.9);
-}
 
 .experience-button {
-  position: fixed;
+  position: relative;
   bottom: 0;
-  right: 8rem;
-  left: 8rem;
-  background-color: green;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 5px;
-  font-family: "Bungee", sans-serif;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.experience-button:hover {
-  cursor: pointer;
-  background-color: rgb(0, 255, 106);
-}
-
-.text-3D {
-  font-size: 10px;
-  transform: transition 1s ease-out;
-}
-.text-3D:hover {
-  scale: 1.5;
-}
-
-.about-me {
-  width: 50%;
-  height: 50%;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
-  border-radius: 20px;
-  background-color: seagreen;
-  justify-content: center;
-  text-shadow: 0 4px 4px black;
-  box-shadow: 0 4px 4px black;
-}
-.experience-button {
-  position: fixed;
-  bottom: 0;
-  right: 8rem;
-  left: 8rem;
   color: red;
   text-shadow: 0 2px 4px black;
   background-color: green;
   border: 2px solid black;
   border-radius: 10px;
-  padding: 5px;
+  padding: 3px;
   font-family: "Bungee", sans-serif;
   font-size: 1rem;
   text-align: center;
-  transform: perspective(3000px) rotateX(30deg);
+  transform: perspective(5000px) rotateX(30deg);
 }
 
 .experience-button:hover {
   cursor: pointer;
   background-color: rgb(0, 255, 106);
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 5px;
-  font-family: "Bungee", sans-serif;
-  font-size: 1rem;
-  text-align: center;
   transform: scale(1.1);
 }
 
@@ -220,6 +171,19 @@ img {
   box-shadow: 0 4px 4px black;
 }
 
+.text-3D {
+  position: relative;
+  transition: transform 0.5s ease-out;
+  color: yellow;
+  text-shadow: 0 4px 10px black;
+  z-index: 1;
+  font-size: 10px;
+}
+.text-3D:hover {
+  z-index: 1;
+  scale: 1.1;
+}
+
 .projects-title {
   font-size: 20px;
   color: red;
@@ -233,14 +197,11 @@ img {
   text-shadow: none;
 }
 .projects-container {
-  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   color: green;
-  text-shadow: 0 4px 4px black;
-  perspective: 3000px;
+  perspective: 5000px;
   transform-style: preserve-3d;
 }
 
