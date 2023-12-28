@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
   font-family: "Bungee", sans-serif;
@@ -19,7 +23,7 @@ body {
   background-image: linear-gradient(rgb(80, 17, 1), darkblue);
   background-repeat: repeat;
   background-attachment: fixed;
-  min-height: 200vh;
+  min-height: 300vh;
   z-index: 0 !important;
 }
 .container {
@@ -135,6 +139,13 @@ img {
   text-shadow: white 0 0 5px;
 }
 
+.about-me {
+  font-size: 1.5rem;
+  color: green;
+  text-align: center;
+  text-shadow: white 0 0 5px;
+}
+
 .experience-button {
   position: relative;
   bottom: 0;
@@ -173,6 +184,8 @@ img {
 
 .text-3D {
   position: relative;
+  text-wrap: wrap;
+  text-align: center;
   transition: transform 0.5s ease-out;
   color: yellow;
   text-shadow: 0 4px 10px black;

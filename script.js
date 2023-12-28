@@ -54,6 +54,10 @@ aboutMeButton.addEventListener("click", function () {
   }
 });
 
+window.addEventListener("load", function () {
+  aboutMe.childNodes[3].innerText = aboutMeText;
+});
+
 // Tilt the element when mouse moves
 function tilt(container, e) {
   const tiltX =
