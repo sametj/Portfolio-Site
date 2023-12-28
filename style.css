@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Bungee", sans-serif;
+  max-height: max-content;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: green;
+}
+body {
+  background-image: linear-gradient(rgb(80, 17, 1), darkblue);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+.container {
+  margin-top: 30rem;
+}
+img {
+  margin: 10px auto;
+  width: 95%;
+  height: 40%;
+  object-fit: contain;
+  border: 2px;
+  border-radius: 20px;
+}
+
+.navbar,
+.container-3D {
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "Bungee", sans-serif;
+  margin-bottom: 40rem;
+}
+
+.navbar {
+  position: sticky;
+  display: flex;
+  justify-content: space-evenly;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 2rem;
+  text-justify: center;
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid black;
+  box-shadow: 0 10px 20px white;
+  border-radius: 15px;
+}
+
+.container-3D {
+  margin: 12rem auto;
+  width: fit-content;
+  align-content: center;
+  height: 60%;
+  background-image: linear-gradient(rgb(80, 17, 1), darkblue);
+  border: 2px solid black;
+  border-radius: 30px;
+  text-shadow: white 0 0 10px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-out;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-page-title {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  color: Black;
+}
+
+.name {
+  color: green;
+  text-shadow: 0 4px 4px black;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px;
+  padding: 0;
+  color: green;
+  text-shadow: 0 4px 4px black;
+}
+
+.skill-header {
+  font-size: 2rem;
+  color: Red;
+}
+
+.container-3D::before,
+.container-3D::after {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  border-radius: inherit;
+  box-shadow: 0 0 20px white;
+}
+
+.container-3D::before {
+  inset: 0.75rem;
+  background: black;
+  transform: translateZ(-49px);
+  filter: blur(15px);
+  opacity: 0.5;
+}
+
+.container-3D::after {
+  inset: -0.9rem;
+  background: linear-gradient(-45deg, rgb(0, 255, 106), rgb(239, 235, 241));
+  transform: translateZ(-50px);
+}
+
+.text-3D {
+  transition: transform 0.5s ease-out;
+  color: yellow;
+  text-shadow: 0 4px 10px black;
+}
+.about-me-title {
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  text-shadow: white 0 0 5px;
+}
+.text-3D:hover {
+  transform: scale(0.9);
+}
+
+.experience-button {
+  position: fixed;
+  bottom: 0;
+  right: 8rem;
+  left: 8rem;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.experience-button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 255, 106);
+}
+
+.text-3D {
+  transform: transition 1s ease-out;
+}
+.text-3D:hover {
+  scale: 1.4;
+}
+
+.about-me {
+  margin: 0 auto;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: seagreen;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  text-shadow: 0 4px 4px black;
+  box-shadow: 0 4px 4px black;
+}
+.experience-button {
+  position: fixed;
+  bottom: 0;
+  right: 8rem;
+  left: 8rem;
+  color: red;
+  text-shadow: 0 2px 4px black;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transform: perspective(3000px) rotateX(30deg);
+}
+
+.experience-button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 255, 106);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transform: scale(1.1);
+}
+
+.project-header-div {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: seagreen;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  color: green;
+  text-shadow: 0 4px 4px black;
+  box-shadow: 0 4px 4px black;
+}
+
+.projects-title {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  text-shadow: none;
+}
+
+.projects-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  color: green;
+  text-shadow: 0 4px 4px black;
+  perspective: 3000px;
+  transform-style: preserve-3d;
+}
+
+.project {
+  position: fixed;
+  margin: 3rem; /* Adjust this value as needed */
+  text-shadow: none;
+  height: 30rem;
+  width: 20rem;
+  flex: 0 0 auto;
+  transition: transform 1s ease-out;
+}
+
+.project:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.project:nth-child(1) {
+  transform: translate3d(-60%, 0, -220px);
+}
+
+.project:nth-child(2) {
+  transform: translate3d(60%, 0, -220px);
+}
+
+.project:nth-child(3) {
+  transform: translate3d(0, 0, 0);
+}
+
+.project-button {
+  position: relative;
+  margin-top: 70px;
+  width: 70%;
+  height: fit-content;
+  color: red;
+  text-shadow: 0 2px 4px black;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transform: perspective(3000px) rotateX(30deg);
+}
+
+.project-button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 255, 106);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transform: scale(1.1);
+}
