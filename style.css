@@ -2,9 +2,10 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
-  font-family: "Bungee", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   overflow-x: hidden;
 }
 a {
@@ -19,11 +20,17 @@ a:hover {
 
 body {
   position: relative;
-  background-image: linear-gradient(rgb(80, 17, 1), darkblue);
+  background-image: radial-gradient(
+    circle,
+    rgb(247, 247, 247),
+    rgb(0, 217, 255)
+  );
   background-repeat: repeat;
   background-attachment: fixed;
   min-height: 300vh;
-  z-index: 0 !important;
+}
+.landing-page-title {
+  font-family: "Bungee", sans-serif;
 }
 .container {
   margin: 0 auto;
@@ -65,13 +72,12 @@ img {
 
 .container-3D {
   margin: 12rem auto;
-  width: fit-content;
+  width: 95%;
   align-content: center;
   height: fit-content;
   background-image: linear-gradient(rgb(80, 17, 1), darkblue);
   border: 2px solid black;
   border-radius: 30px;
-  text-shadow: white 0 0 10px;
   transform-style: preserve-3d;
   transition: transform 1s ease-out;
   background-attachment: fixed;
@@ -114,7 +120,7 @@ img {
   position: absolute;
   opacity: 0.5;
   border-radius: inherit;
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .container-3D::before {
@@ -134,30 +140,6 @@ img {
 .about-me-title {
   font-size: 2rem;
   color: red;
-  text-align: center;
-  text-shadow: white 0 0 5px;
-}
-
-.about-me {
-  font-size: 1.5rem;
-  color: green;
-  text-align: center;
-  text-shadow: white 0 0 5px;
-}
-
-.experience-button {
-  position: relative;
-  bottom: 0;
-  color: red;
-  text-shadow: 0 2px 4px black;
-  background-color: green;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 3px;
-  font-family: "Bungee", sans-serif;
-  font-size: 1rem;
-  text-align: center;
-  transform: perspective(5000px) rotateX(30deg);
 }
 
 .experience-button:hover {
@@ -183,17 +165,12 @@ img {
 
 .text-3D {
   position: relative;
-  text-wrap: wrap;
-  text-align: center;
   transition: transform 0.5s ease-out;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: yellow;
   text-shadow: 0 4px 10px black;
-  z-index: 1;
-  font-size: 10px;
-}
-.text-3D:hover {
-  z-index: 1;
-  scale: 1.1;
+  font-size: 1.5rem;
 }
 
 .projects-title {
@@ -202,12 +179,14 @@ img {
   text-align: center;
   text-shadow: none;
 }
-.project-title {
+.projects-title {
   font-size: 20px;
-  color: green;
+  color: Red;
   text-align: center;
   text-shadow: none;
+  font-family: "Bungee", sans-serif;
 }
+
 .projects-container {
   position: relative;
   display: flex;
@@ -219,7 +198,7 @@ img {
 
 .project {
   position: fixed;
-  margin: 3rem; /* Adjust this value as needed */
+  margin: 3rem;
   text-shadow: none;
   height: 30rem;
   width: 20rem;
@@ -271,4 +250,9 @@ img {
   font-size: 1rem;
   text-align: center;
   transform: scale(1.1);
+}
+
+li {
+  color: white;
+  font-weight: bold;
 }
