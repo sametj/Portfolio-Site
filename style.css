@@ -2,12 +2,20 @@
 * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
   font-family: "Times New Roman", Times, serif;
-  overflow-x: hidden;
 }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-image: radial-gradient(circle, rgb(247, 247, 247), beige);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 500vh;
+}
+
 a {
   text-decoration: none;
   color: red;
@@ -15,23 +23,9 @@ a {
 
 a:hover {
   transform: scale(1.1);
-  color: black;
+  color: blue;
 }
 
-body {
-  position: relative;
-  background-image: radial-gradient(
-    circle,
-    rgb(247, 247, 247),
-    rgb(0, 217, 255)
-  );
-  background-repeat: repeat;
-  background-attachment: fixed;
-  min-height: 500vh;
-}
-.landing-page-title {
-  font-family: "Bungee", sans-serif;
-}
 .container {
   margin: 0 auto;
 }
@@ -45,8 +39,8 @@ img {
 }
 
 .navbar,
-.container-3D {
-  text-transform: capitalize;
+.container-3D,
+.landing-page-title {
   text-align: center;
   font-family: "Bungee", sans-serif;
 }
@@ -75,7 +69,7 @@ img {
   width: 95%;
   align-content: center;
   height: fit-content;
-  background-image: linear-gradient(rgb(80, 17, 1), darkblue);
+  background-image: linear-gradient(#6f848b, beige);
   border: 2px solid black;
   border-radius: 30px;
   transform-style: preserve-3d;
@@ -90,35 +84,39 @@ img {
   font-size: 3rem;
   margin: 0;
   padding: 0;
-  color: Black;
+  color: red;
+}
+
+.landing-page-subtitle {
+  color: blue;
 }
 
 .name {
   color: green;
   text-shadow: 0 4px 4px black;
+  font-size: 2rem;
 }
 
 .skills-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 50px;
   padding: 0;
-  color: green;
-  text-shadow: 0 4px 4px black;
+  color: blue;
 }
 
 .skill-header {
   font-size: 2rem;
-  color: Red;
+  color: green;
 }
 
 .container-3D::before,
 .container-3D::after {
   content: "";
   position: absolute;
-  opacity: 0.5;
+
   border-radius: inherit;
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }
@@ -169,7 +167,7 @@ img {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: yellow;
-  text-shadow: 0 4px 10px black;
+  text-shadow: 0 4px 4px black;
   font-size: 1.5rem;
 }
 
@@ -191,7 +189,7 @@ img {
   position: relative;
   display: flex;
   justify-content: center;
-  color: green;
+  color: blue;
   perspective: 5000px;
   transform-style: preserve-3d;
 }
@@ -212,21 +210,22 @@ img {
 }
 
 .project:nth-child(1) {
-  transform: translate3d(-60%, 0, -220px);
+  transform: translate3d(-60%, 0, -320px);
 }
 
 .project:nth-child(2) {
-  transform: translate3d(60%, 0, -220px);
+  transform: translate3d(60%, 0, -320px);
 }
 
-.project:nth-child(3) {
+.project:nth-child(0) {
   transform: translate3d(0, 0, 0);
 }
 
 .project-button {
-  position: relative;
-  margin-top: 70px;
-  width: 70%;
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  width: 50%;
   height: fit-content;
   color: red;
   text-shadow: 0 2px 4px black;
@@ -255,4 +254,14 @@ img {
 li {
   color: white;
   font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .navbar {
+    font-size: 13px;
+  }
 }

@@ -1,9 +1,8 @@
 const profileCard = document.querySelector(".container-3D");
 const aboutMe = document.querySelector(".about-me");
-const aboutMeButton = document.querySelector(".experience-button");
-const active = document.querySelector(".active");
 const projects = document.querySelectorAll(".project");
 const projectContainer = document.querySelector(".projects-container");
+const experience = document.querySelector(".experience");
 
 var currentIndex = 0;
 
@@ -19,12 +18,21 @@ profileCard.addEventListener("mousemove", function (e) {
 aboutMe.addEventListener("mousemove", function (e) {
   tilt(this, e);
 });
+
+experience.addEventListener("mousemove", function (e) {
+  tilt(this, e);
+});
+
 // Reset the tilt when the mouse leaves the element
 profileCard.addEventListener("mouseleave", function () {
   resetTilt(this);
 });
 
 aboutMe.addEventListener("mouseleave", function () {
+  resetTilt(this);
+});
+
+experience.addEventListener("mouseleave", function () {
   resetTilt(this);
 });
 
