@@ -27,7 +27,7 @@ body {
   );
   background-repeat: repeat;
   background-attachment: fixed;
-  min-height: 300vh;
+  min-height: 500vh;
 }
 .landing-page-title {
   font-family: "Bungee", sans-serif;
