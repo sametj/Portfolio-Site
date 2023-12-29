@@ -3,6 +3,7 @@ const aboutMe = document.querySelector(".about-me");
 const aboutMeButton = document.querySelector(".experience-button");
 const active = document.querySelector(".active");
 const projects = document.querySelectorAll(".project");
+
 var currentIndex = 0;
 
 let left = `translate3d(-60%, 0, -220px)`;
@@ -82,35 +83,32 @@ projects.forEach(function (project, index) {
 let touchStartX = 0;
 let touchEndX = 0;
 
-function handleTouchStart(e) {
+function swipeStart(e) {
   touchStartX = e.changedTouches[0].screenX;
 }
 
-function handleTouchMove(e) {
+function swipeMove(e) {
   touchEndX = e.changedTouches[0].screenX;
 }
 
-function handleTouchEnd() {
+function swipeEnd() {
+  if (touchEndX === 0) {
+    return;
+  }
   if (touchEndX < touchStartX) {
-    console.log("Swiped left");
-    projects.forEach(function (project, index) {
-      project.addEventListener("touchend", function () {
-        currentIndex = index;
-        updateCarousel();
-        rotateCorousel(projects);
-      });
-    });
+    if (currentIndex === projects.length - 1) {
+      currentIndex = 0;
+    } else currentIndex += 1;
+    updateCarousel();
+    rotateCorousel(projects);
   }
 
   if (touchEndX > touchStartX) {
-    console.log("Swiped right");
-    projects.forEach(function (project, index) {
-      project.addEventListener("touchend", function () {
-        currentIndex = index;
-        updateCarousel();
-        rotateCorousel(projects);
-      });
-    });
+    if (currentIndex === 0) {
+      currentIndex = 2;
+    } else currentIndex -= 1;
+    updateCarousel();
+    rotateCorousel(projects);
   }
 
   // Reset
@@ -118,6 +116,6 @@ function handleTouchEnd() {
   touchEndX = 0;
 }
 
-document.addEventListener("touchstart", handleTouchStart, false);
-document.addEventListener("touchmove", handleTouchMove, false);
-document.addEventListener("touchend", handleTouchEnd, false);
+document.addEventListener("touchstart", swipeStart, false);
+document.addEventListener("touchmove", swipeMove, false);
+document.addEventListener("touchend", swipeEnd, false);
