@@ -97,17 +97,17 @@ function swipeEnd() {
     return;
   }
   if (touchEndX < touchStartX) {
-    if (currentIndex === projects.length - 1) {
+    currentIndex++;
+    if (currentIndex > projects.length - 1) {
       currentIndex = 0;
-    } else currentIndex += 1;
+    }
     updateCarousel();
     rotateCorousel(projects);
-  }
-
-  if (touchEndX > touchStartX) {
-    if (currentIndex === 0) {
-      currentIndex = 2;
-    } else currentIndex -= 1;
+  } else if (touchEndX > touchStartX) {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = projects.length - 1;
+    }
     updateCarousel();
     rotateCorousel(projects);
   }
