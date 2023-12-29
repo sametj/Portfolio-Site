@@ -3,6 +3,7 @@ const aboutMe = document.querySelector(".about-me");
 const aboutMeButton = document.querySelector(".experience-button");
 const active = document.querySelector(".active");
 const projects = document.querySelectorAll(".project");
+const projectContainer = document.querySelector(".projects-container");
 
 var currentIndex = 0;
 
@@ -116,6 +117,6 @@ function swipeEnd() {
   touchEndX = 0;
 }
 
-document.addEventListener("touchstart", swipeStart, false);
-document.addEventListener("touchmove", swipeMove, false);
-document.addEventListener("touchend", swipeEnd, false);
+projectContainer.addEventListener("touchstart", swipeStart, false);
+projectContainer.addEventListener("touchmove", swipeMove, false);
+projectContainer.addEventListener("touchend", swipeEnd, false);
