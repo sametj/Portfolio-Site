@@ -144,7 +144,7 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin: 50px;
+  margin: 65px auto;
   padding: 0;
   color: blue;
 }
