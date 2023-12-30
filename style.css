@@ -350,6 +350,10 @@ li {
 }
 
 @media screen and (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .skills-container {
     flex-direction: column;
   }
@@ -379,6 +383,12 @@ li {
 }
 
 @media screen and (min-width: 1000px) {
+  .hamburger-menu {
+    display: none;
+  }
+  .hamburger-navbar {
+    display: none;
+  }
   .container-3D {
     width: 50rem;
   }
