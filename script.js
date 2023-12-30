@@ -128,3 +128,16 @@ function swipeEnd() {
 projectContainer.addEventListener("touchstart", swipeStart, false);
 projectContainer.addEventListener("touchmove", swipeMove, false);
 projectContainer.addEventListener("touchend", swipeEnd, false);
+
+function toggleMenu() {
+  var hamburger = document.querySelector(".hamburger-menu");
+  var menu = document.querySelector(".hamburger-navbar");
+  menu.classList.toggle("active");
+  if (menu.classList.contains("active")) {
+    hamburger.innerHTML = `<i class="fa-solid fa-times fa-2xl"></i>`;
+    menu.style.display = "flex";
+  } else {
+    menu.style.display = "none";
+    hamburger.innerHTML = `<i class="fa-solid fa-bars fa-2xl"></i>`;
+  }
+}

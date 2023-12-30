@@ -12,124 +12,141 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
+    <!--Hamburger Menu-->
+
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+
+    <div class="hamburger-navbar">
+      <a href="#intro-card">Intro Card</a>
+      <a href="#about-me">About Me</a>
+      <a href="#experiences">Experience</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Floating Github button -->
+
+    <a href="https://github.com/sametj">
+      <button class="github-button">
+        <i class="fa-brands fa-github"></i>
+      </button>
+    </a>
+
+    <!-- Navbar -->
     <div class="navbar">
       <a href="#intro-card">Intro Card</a>
       <a href="#about-me">About Me</a>
       <a href="#experiences">Experience</a>
       <a href="#projects">projects</a>
+      <a href="#contact">Contact</a>
     </div>
+
     <!-- Intro card Section-->
-    <div class="container">
-      <section id="intro-card" class="container-3D">
-        <h1 class="landing-page-title">Welcome to my portfolio</h1>
+    <section id="intro-card" class="container-3D">
+      <h1 class="landing-page-title">Welcome to my portfolio</h1>
 
-        <h2 class="landing-page-subtitle name">
-          Hello! my name is Temitope Moses James
-        </h2>
+      <h2 class="landing-page-subtitle name">
+        Hello! my name is Temitope Moses James
+      </h2>
 
-        <h1 class="landing-page-subtitle">Web Developer</h1>
-        <h1 class="landing-page-subtitle">Software Engineer</h1>
+      <h1 class="landing-page-subtitle">Web Developer</h1>
+      <h1 class="landing-page-subtitle">Software Engineer</h1>
 
-        <h2 class="skill-header">Skills</h2>
-        <div class="skills-container">
-          <div class="skill">
-            <i
-              class="fa-brands fa-html5 fa-bounce fa-2xl"
-              style="color: #ff0000"
-            ></i>
-            <p>HTML</p>
-          </div>
-          <div class="skill">
-            <i
-              class="fa-brands fa-css3 fa-bounce fa-2xl"
-              style="color: #005eff"
-            ></i>
-            <p>CSS</p>
-          </div>
-          <div class="skill">
-            <i
-              class="fa-brands fa-js fa-bounce fa-2xl"
-              style="color: #f2d307"
-            ></i>
-            <p>Javascript</p>
-          </div>
-          <div class="skill">
-            <i
-              class="fa-solid fa-database fa-bounce fa-2xl"
-              style="color: #0040ff"
-            ></i>
-            <p>MySQL</p>
-          </div>
-
-          <div class="skill">
-            <i
-              class="fa-brands fa-java fa-bounce fa-2xl"
-              style="color: #ff0000"
-            ></i>
-            <p>Java</p>
-          </div>
+      <h2 class="skill-header">Skills</h2>
+      <div class="skills-container">
+        <div class="skill">
+          <i
+            class="fa-brands fa-html5 fa-bounce fa-2xl"
+            style="color: #ff0000"
+          ></i>
+          <p>HTML</p>
         </div>
-      </section>
-    </div>
+        <div class="skill">
+          <i
+            class="fa-brands fa-css3 fa-bounce fa-2xl"
+            style="color: #005eff"
+          ></i>
+          <p>CSS</p>
+        </div>
+        <div class="skill">
+          <i
+            class="fa-brands fa-js fa-bounce fa-2xl"
+            style="color: #f2d307"
+          ></i>
+          <p>Javascript</p>
+        </div>
+        <div class="skill">
+          <i
+            class="fa-solid fa-database fa-bounce fa-2xl"
+            style="color: #0040ff"
+          ></i>
+          <p>MySQL</p>
+        </div>
+
+        <div class="skill">
+          <i
+            class="fa-brands fa-java fa-bounce fa-2xl"
+            style="color: #ff0000"
+          ></i>
+          <p>Java</p>
+        </div>
+      </div>
+    </section>
 
     <!-- About Me Section -->
-    <div class="container">
-      <section id="about-me" class="container-3D about-me">
-        <h1 class="about-me-title">About Me</h1>
-        <div class="text-3D">
-          <p id="about-me-text">
-            Results-driven Software Engineering enthusiast with a strong
-            foundation in Java programming, Object-Oriented Programming (OOP),
-            and proficiency in Agile methodologies. Highly adaptable and
-            committed to contributing innovative solutions to complex software
-            development challenges. Seeking opportunities to further expand
-            expertise and make a meaningful impact in the world of software
-            engineering.
-          </p>
-        </div>
-      </section>
-    </div>
 
-    <div class="container">
-      <section id="experiences" class="container-3D experience">
-        <h1 class="about-me-title">Experience</h1>
-        <div class="text-3D">
-          <p id="about-me-text">
-            CUNY School of Medicine New York, NY Cuny Office Assistant 02/2023 -
-            07/2023
-            <li>Organized and maintained student files and records</li>
-            <br />
-            <li>
-              Created and edited Excel spreadsheets for data visualization
-            </li>
-            <br />
-            <li>Operated CUNYFirst website for requisition management</li>
-            <br />
-            <li>Arranged Zoom meetings for seamless virtual interactions</li>
-          </p>
+    <section id="about-me" class="container-3D about-me">
+      <h1 class="about-me-title">About Me</h1>
+      <div class="text-3D">
+        <h3 id="about-me-text">
+          Results-driven Software Engineering enthusiast with a strong
+          foundation in Java programming, Object-Oriented Programming (OOP), and
+          proficiency in Agile methodologies. Highly adaptable and committed to
+          contributing innovative solutions to complex software development
+          challenges. Seeking opportunities to further expand expertise and make
+          a meaningful impact in the world of software engineering.
+        </h3>
+      </div>
+    </section>
 
-          <p>
-            New York City Department of Social Services New York, NY IT Intern
-            07/2022 - 08/2022
-            <br />
+    <!-- Experience Section -->
 
-            <li>Queried and edited Oracle database for required data</li>
-            <br />
+    <section id="experiences" class="container-3D experience">
+      <h1 class="about-me-title">Experience</h1>
+      <div class="text-3D">
+        <p id="about-me-text">
+          CUNY School of Medicine New York, NY Cuny Office Assistant 02/2023 -
+          07/2023
+          <li>Organized and maintained student files and records</li>
+          <br />
+          <li>Created and edited Excel spreadsheets for data visualization</li>
+          <br />
+          <li>Operated CUNYFirst website for requisition management</li>
+          <br />
+          <li>Arranged Zoom meetings for seamless virtual interactions</li>
+        </p>
 
-            <li>
-              Created and edited Excel spreadsheets for data visualization
-            </li>
-            <br />
-            <li>
-              Used Jira and Confluence to link development issues for bug
-              identification
-            </li>
-            <br />
-            <li>Participated in daily SCRUM meetings for task update.</li>
-          </p>
-        </div>
-      </section>
-    </div>
+        <p>
+          New York City Department of Social Services New York, NY IT Intern
+          07/2022 - 08/2022
+          <br />
+
+          <li>Queried and edited Oracle database for required data</li>
+          <br />
+
+          <li>Created and edited Excel spreadsheets for data visualization</li>
+          <br />
+          <li>
+            Used Jira and Confluence to link development issues for bug
+            identification
+          </li>
+          <br />
+          <li>Participated in daily SCRUM meetings for task update.</li>
+        </p>
+      </div>
+    </section>
 
     <!-- Projects Section -->
     <div class="project-header-div">
@@ -137,7 +154,7 @@
     </div>
 
     <section id="projects" class="projects-container">
-      <div class="project container-3D">
+      <div class="container-3D project">
         <img src="./assets/pomodoro.png" alt="" />
         <div class="project-text">
           <h2 class="project-title">Pomodoro</h2>
@@ -147,7 +164,7 @@
         </div>
       </div>
 
-      <div class="project container-3D">
+      <div class="container-3D project">
         <img src="./assets/habittracker.png" alt="" />
         <div class="project-text">
           <h2 class="project-title">Snowbirds Habit Tracker</h2>
@@ -157,13 +174,38 @@
         </div>
       </div>
 
-      <div class="project container-3D">
+      <div class="container-3D project">
         <img src="./assets/asteroidJSP.png" alt="" />
         <div class="project-text">
           <h2 class="project-title">Asteoroid JSP Web App</h2>
           <a href="https://github.com/sametj/CST4713"
             ><button class="project-button">View Project</button></a
           >
+        </div>
+      </div>
+    </section>
+
+    <!--Contact Me-->
+    <section id="contact">
+      <div class="contact-header-div">
+        <h1 class="contact-title">Contact Me</h1>
+      </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <i class="fa-solid fa-envelope fa-xl"></i>
+          <p>
+            <a href="mailto:temitope.james@mail.citytech.cuny.edu">
+              temitope.james@mail.citytech.cuny.edu</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <i class="fa-brands fa-linkedin" style="color: #005eff"></i>
+          <p>
+            <a href="https://linkedin.com/in/temitope-james-249370197">
+              Linkedin</a
+            >
+          </p>
         </div>
       </div>
     </section>
