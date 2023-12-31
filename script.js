@@ -3,6 +3,7 @@ const aboutMe = document.querySelector(".about-me");
 const projects = document.querySelectorAll(".project");
 const projectContainer = document.querySelector(".projects-container");
 const experience = document.querySelector(".experience");
+const activeProject = document.querySelector(".active");
 
 var currentIndex = 0;
 

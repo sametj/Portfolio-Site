@@ -5,7 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -178,12 +178,6 @@ img {
   color: red;
 }
 
-.experience-button:hover {
-  cursor: pointer;
-  background-color: rgb(0, 255, 106);
-  transform: scale(1.1);
-}
-
 .project-header-div,
 .contact-header-div {
   width: 50%;
@@ -234,12 +228,8 @@ img {
   width: 100%;
   justify-content: center;
   color: blue;
-  transform: perspective(1500px) rotateX(8deg);
   transform-style: preserve-3d;
-}
-
-.project:hover {
-  cursor: pointer;
+  transform: perspective(5000px);
 }
 
 .project:nth-child(1) {
@@ -252,36 +242,6 @@ img {
 
 .project:nth-child(0) {
   transform: translate3d(0, 0, 0);
-}
-
-.project-button {
-  position: absolute;
-  bottom: 0;
-  right: 25%;
-  width: 50%;
-  height: fit-content;
-  color: red;
-  text-shadow: 0 2px 4px black;
-  background-color: green;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 5px;
-  font-family: "Bungee", sans-serif;
-  font-size: 1rem;
-  text-align: center;
-  transform: perspective(3000px) rotateX(30deg);
-}
-
-.project-button:hover {
-  cursor: pointer;
-  background-color: rgb(0, 255, 106);
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 5px;
-  font-family: "Bungee", sans-serif;
-  font-size: 1rem;
-  text-align: center;
-  transform: scale(1.1);
 }
 
 li {
@@ -340,6 +300,36 @@ li {
   text-align: center;
 }
 
+.project-button {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  width: 50%;
+  height: fit-content;
+  color: red;
+  text-shadow: 0 2px 4px black;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transform: perspective(3000px) rotateX(30deg);
+}
+
+.project-button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 255, 106);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transform: scale(1.1);
+}
 .fa-github {
   color: black;
   margin: 10px;
@@ -382,6 +372,17 @@ li {
 @media screen and (min-width: 1000px) {
   .hamburger-menu {
     display: none;
+  }
+  .project-button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 255, 106);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: "Bungee", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    transform: scale(1.1);
   }
   .hamburger-navbar {
     display: none;
