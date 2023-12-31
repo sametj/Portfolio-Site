@@ -10,10 +10,7 @@ html {
 
 body {
   overflow-x: hidden;
-  position: relative;
   background-image: radial-gradient(circle, rgb(247, 247, 247), beige);
-  background-repeat: repeat;
-  background-attachment: fixed;
   min-height: 500vh;
 }
 
@@ -331,7 +328,7 @@ li {
   text-decoration: underline;
 }
 
-/* Github Button` */
+/* Github Button */
 .github-button {
   border: none;
   position: fixed;
@@ -395,5 +392,9 @@ li {
   .project {
     height: 40rem;
     width: 30rem;
+  }
+  .project-header-div,
+  .contact-header-div {
+    width: 25%;
   }
 }
