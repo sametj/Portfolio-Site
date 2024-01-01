@@ -7,10 +7,6 @@ const activeProject = document.querySelector(".active");
 
 var currentIndex = 0;
 
-let left = `translate3d(-60%, 0, -220px)`;
-let right = `translate3d(60%, 0, -220px)`;
-let middle = `translate3d(0, 0, 0)`;
-
 // Add a mousemove event listener
 profileCard.addEventListener("mousemove", function (e) {
   tilt(this, e);
@@ -38,7 +34,7 @@ experience.addEventListener("mouseleave", function () {
 });
 
 // Tilt the element when mouse moves
-function tilt(container, e) {
+tilt = (container, e) => {
   const tiltX =
     (container.offsetWidth / 2 - (e.pageX - container.offsetLeft)) / 20;
   const tiltY =
@@ -46,24 +42,29 @@ function tilt(container, e) {
 
   // Apply the tilt effect using the transform property
   container.style.transform = `rotateX(${tiltY}deg) rotateY(${-tiltX}deg)`;
-}
+};
 
 // Reset the tilt effect when mouse moves out of the element
-function resetTilt(container) {
-  container.style.transform = "";
-}
+resetTilt = (container) => {
+  container.style.transform = `rotateX(0deg) rotateY(0deg)`;
+};
 
-function updateCarousel() {
-  for (var i = 0; i < projects.length; i++) {
-    if (i === currentIndex) {
-      projects[i].classList.add("active");
+//Carousel
+
+updateCarousel = () => {
+  projects.forEach(function (project, index) {
+    if (index === currentIndex) {
+      project.classList.add("active");
     } else {
-      projects[i].classList.remove("active");
+      project.classList.remove("active");
     }
-  }
-}
+  });
+};
 
-function rotateCorousel(array) {
+rotateCorousel = (array) => {
+  let left = `translate3d(-60%, 0, -220px)`;
+  let right = `translate3d(60%, 0, -220px)`;
+  let middle = `translate3d(0, 0, 0)`;
   for (var i = 0; i < array.length; i++) {
     if (array[0].classList.contains("active")) {
       array[1].style.transform = right;
@@ -79,7 +80,7 @@ function rotateCorousel(array) {
       array[2].style.transform = middle;
     }
   }
-}
+};
 
 projects.forEach(function (project, index) {
   project.addEventListener("click", function () {
@@ -89,48 +90,51 @@ projects.forEach(function (project, index) {
   });
 });
 
-//Rototate carousel on mobile swipe
-let touchStartX = 0;
-let touchEndX = 0;
+//Mobile Carousel and Hamburger Menu
 
-function swipeStart(e) {
-  touchStartX = e.changedTouches[0].screenX;
-}
+mobileCorousel = (array) => {
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-function swipeMove(e) {
-  touchEndX = e.changedTouches[0].screenX;
-}
+  swipeStart = (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  };
 
-function swipeEnd() {
-  if (touchEndX === 0) {
-    return;
-  }
-  if (touchEndX < touchStartX) {
-    currentIndex++;
-    if (currentIndex > projects.length - 1) {
-      currentIndex = 0;
+  swipeMove = (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+  };
+
+  swipeEnd = () => {
+    if (touchEndX === 0) {
+      return;
     }
-    updateCarousel();
-    rotateCorousel(projects);
-  } else if (touchEndX > touchStartX) {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = projects.length - 1;
+    if (touchEndX < touchStartX) {
+      currentIndex++;
+      if (currentIndex > array.length - 1) {
+        currentIndex = 0;
+      }
+      updateCarousel();
+      rotateCorousel(array);
+    } else if (touchEndX > touchStartX) {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = array.length - 1;
+      }
+      updateCarousel();
+      rotateCorousel(array);
     }
-    updateCarousel();
-    rotateCorousel(projects);
-  }
 
-  // Reset
-  touchStartX = 0;
-  touchEndX = 0;
-}
+    // Reset
+    touchStartX = 0;
+    touchEndX = 0;
+  };
 
-projectContainer.addEventListener("touchstart", swipeStart, false);
-projectContainer.addEventListener("touchmove", swipeMove, false);
-projectContainer.addEventListener("touchend", swipeEnd, false);
+  projectContainer.addEventListener("touchstart", swipeStart, false);
+  projectContainer.addEventListener("touchmove", swipeMove, false);
+  projectContainer.addEventListener("touchend", swipeEnd, false);
+};
 
-function toggleMenu() {
+toggleMenu = () => {
   var hamburger = document.querySelector(".hamburger-menu");
   var menu = document.querySelector(".hamburger-navbar");
   menu.classList.toggle("active");
@@ -141,4 +145,6 @@ function toggleMenu() {
     menu.style.display = "none";
     hamburger.innerHTML = `<i class="fa-solid fa-bars fa-2xl"></i>`;
   }
-}
+};
+
+mobileCorousel(projects);
