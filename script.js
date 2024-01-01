@@ -5,7 +5,7 @@ const projectContainer = document.querySelector(".projects-container");
 const experience = document.querySelector(".experience");
 const activeProject = document.querySelector(".active");
 
-var currentIndex = 0;
+let currentIndex = 0;
 
 // Add a mousemove event listener
 profileCard.addEventListener("mousemove", function (e) {
