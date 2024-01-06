@@ -84,7 +84,10 @@ img {
   text-align: center;
   font-family: "Bungee", sans-serif;
 }
-
+li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
 .navbar {
   position: sticky;
   top: 0;
