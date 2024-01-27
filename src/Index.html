@@ -6,7 +6,7 @@
       content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"
     />
     <title>Temitope Moses James Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./assets/icon.png" />
+    <link rel="icon" type="image/x-icon" href="icon.png" />
 
     <link />
     <link href="style.css" rel="stylesheet" />
@@ -53,8 +53,7 @@
         Hello! my name is Temitope Moses James
       </h2>
 
-      <h1 class="landing-page-subtitle">Web Developer</h1>
-      <h1 class="landing-page-subtitle">Software Engineer</h1>
+      <h1 class="landing-page-subtitle">Full-Stack Developer</h1>
 
       <h2 class="skill-header">Skills</h2>
       <div class="skills-container">
@@ -79,6 +78,16 @@
           ></i>
           <p>Javascript</p>
         </div>
+
+        <div class="skill">
+          <i
+            class="fa-brands fa-java fa-bounce fa-2xl"
+            style="color: #ff0000"
+          ></i>
+          <p>Java</p>
+        </div>
+      </div>
+      <div class="skills-container">
         <div class="skill">
           <i
             class="fa-solid fa-database fa-bounce fa-2xl"
@@ -89,10 +98,26 @@
 
         <div class="skill">
           <i
-            class="fa-brands fa-java fa-bounce fa-2xl"
-            style="color: #ff0000"
+            class="fa-brands fa-node-js fa-bounce fa-2xl"
+            style="color: red"
           ></i>
-          <p>Java</p>
+          <p>Node.js</p>
+        </div>
+
+        <div class="skill">
+          <i
+            class="fa-brands fa-react fa-bounce fa-2xl"
+            style="color: blue"
+          ></i>
+          <p>React</p>
+        </div>
+
+        <div class="skill">
+          <i
+            class="fa-solid fa-database fa-bounce fa-2xl"
+            style="color: limegreen"
+          ></i>
+          <p>MongoDB</p>
         </div>
       </div>
     </section>
@@ -103,12 +128,14 @@
       <h1 class="about-me-title">About Me</h1>
       <div class="text-3D">
         <h3 id="about-me-text">
-          Results-driven Software Engineering enthusiast with a strong
-          foundation in Java programming, Object-Oriented Programming (OOP), and
-          proficiency in Agile methodologies. Highly adaptable and committed to
-          contributing innovative solutions to complex software development
-          challenges. Seeking opportunities to further expand expertise and make
-          a meaningful impact in the world of software engineering.
+          <p>
+            Proactive and adaptable Full-Stack Developer with expertise in
+            JavaScript, React, Java, HTML, and CSS. A dynamic problem-solver, I
+            thrive on challenges and bring enthusiasm to crafting innovative web
+            applications. Excited about contributing to cutting-edge projects
+            and leveraging my full-stack capabilities to deliver comprehensive
+            solutions.
+          </p>
         </h3>
       </div>
     </section>
@@ -119,33 +146,54 @@
       <h1 class="about-me-title">Experience</h1>
       <div class="text-3D">
         <p id="about-me-text">
-          CUNY School of Medicine New York, NY Cuny Office Assistant 02/2023 -
+          CUNY School of Medicine New York, NY Cuny Office Assistant | 02/2023 -
           07/2023
-          <li>Organized and maintained student files and records</li>
+          <li>
+            Developed and optimized Excel spreadsheets, elevating data
+            organization and accuracy to support informed decision-making.
+          </li>
           <br />
-          <li>Created and edited Excel spreadsheets for data visualization</li>
+          <li>
+            Leveraged Adobe Acrobat for form creation/editing, orchestrated Zoom
+            meetings for efficient virtual interactions, and managed
+            requisitions through the CUNYFirst website, ensuring streamlined
+            operations.
+          </li>
           <br />
-          <li>Operated CUNYFirst website for requisition management</li>
+          <li>
+            Spearheaded internal and external communications, enhancing
+            workplace coordination and fostering collaborative relationships.
+          </li>
           <br />
-          <li>Arranged Zoom meetings for seamless virtual interactions</li>
         </p>
 
         <p>
-          New York City Department of Social Services New York, NY IT Intern
-          07/2022 - 08/2022
+          New York City Department of Social Services New York, NY Database
+          Analyst Intern | 07/2022 - 08/2022
           <br />
 
-          <li>Queried and edited Oracle database for required data</li>
-          <br />
-
-          <li>Created and edited Excel spreadsheets for data visualization</li>
-          <br />
           <li>
-            Used Jira and Confluence to link development issues for bug
-            identification
+            <i>Data Analysis & Database Management</i>: Proficiently queried and
+            edited Oracle databases, created Excel trackers via ODBC
+            connections, and leveraged SQL for data visualization, including
+            pivot tables and graphs.
           </li>
           <br />
-          <li>Participated in daily SCRUM meetings for task update.</li>
+
+          <li>
+            <i>Collaboration & Issue Resolution</i> : Partnered with development
+            teams using Jira and Confluence to identify and address software
+            bugs, ensuring streamlined communication and efficient
+            problem-solving.
+          </li>
+          <br />
+          <li>
+            <i>Agile Project Participation</i>: Actively engaged in daily SCRUM
+            meetings, providing consistent task updates and contributing to
+            cross-functional collaboration on project milestones and
+            deliverables.
+          </li>
+          <br />
         </p>
       </div>
     </section>
@@ -154,12 +202,16 @@
     <section class="project-header-div">
       <h1 class="projects-title">Projects</h1>
     </section>
-
     <section id="projects" class="projects-container">
       <div class="container-3D project">
         <img src="pomodoro.png" alt="" />
         <div class="project-text">
           <h2 class="project-title">Pomodoro</h2>
+          <a href="https://teejays-pomodoro.netlify.app"
+            ><button class="project-button live-preview">
+              Live Preview
+            </button></a
+          >
           <a href="https://github.com/sametj/Pomodoro"
             ><button class="project-button">View Project</button></a
           >
@@ -167,10 +219,15 @@
       </div>
 
       <div class="container-3D project">
-        <img src="habittracker.png" alt="" />
+        <img src="actionAtlas.png" alt="actio-atlas" />
         <div class="project-text">
-          <h2 class="project-title">Snowbirds Habit Tracker</h2>
-          <a href="https://github.com/sametj/Habit-Tracker"
+          <h2 class="project-title">ActionAtlas</h2>
+          <a href="https://action-atlas.vercel.app"
+            ><button class="project-button live-preview">
+              Live Preview
+            </button></a
+          >
+          <a href="https://github.com/sametj/ActionAtlas"
             ><button class="project-button">View Project</button></a
           >
         </div>
