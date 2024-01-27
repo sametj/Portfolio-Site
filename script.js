@@ -5,7 +5,7 @@ const projectContainer = document.querySelector(".projects-container");
 const experience = document.querySelector(".experience");
 const activeProject = document.querySelector(".active");
 
-var currentIndex = 0;
+let currentIndex = 0;
 
 // Add a mousemove event listener
 profileCard.addEventListener("mousemove", function (e) {
@@ -138,6 +138,7 @@ toggleMenu = () => {
   var hamburger = document.querySelector(".hamburger-menu");
   var menu = document.querySelector(".hamburger-navbar");
   menu.classList.toggle("active");
+
   if (menu.classList.contains("active")) {
     hamburger.innerHTML = `<i class="fa-solid fa-times fa-2xl"></i>`;
     menu.style.display = "flex";
