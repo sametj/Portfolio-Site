@@ -15,9 +15,15 @@
     "three": "^0.160.1",
     "vite": "^5.0.12"
   },
+  "modules": [
+    "/src/js/3d.js",
+    "/src/js/script.js"
+  ],
+  "devDependencies": {},
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "keywords": [],
   "author": "",

@@ -1,3 +1,5 @@
+import "../style.css";
+
 const profileCard = document.querySelector(".container-3D");
 const aboutMe = document.querySelector(".about-me");
 const projects = document.querySelectorAll(".project");
@@ -5,7 +7,7 @@ const projectContainer = document.querySelector(".projects-container");
 const experience = document.querySelector(".experience");
 const activeProject = document.querySelector(".active");
 
-var currentIndex = 0;
+let currentIndex = 0;
 
 // Add a mousemove event listener
 profileCard.addEventListener("mousemove", function (e) {
@@ -34,7 +36,7 @@ experience.addEventListener("mouseleave", function () {
 });
 
 // Tilt the element when mouse moves
-tilt = (container, e) => {
+const tilt = (container, e) => {
   const tiltX =
     (container.offsetWidth / 2 - (e.pageX - container.offsetLeft)) / 20;
   const tiltY =
@@ -45,13 +47,13 @@ tilt = (container, e) => {
 };
 
 // Reset the tilt effect when mouse moves out of the element
-resetTilt = (container) => {
+const resetTilt = (container) => {
   container.style.transform = `rotateX(0deg) rotateY(0deg)`;
 };
 
 //Carousel
 
-updateCarousel = () => {
+const updateCarousel = () => {
   projects.forEach(function (project, index) {
     if (index === currentIndex) {
       project.classList.add("active");
@@ -61,7 +63,7 @@ updateCarousel = () => {
   });
 };
 
-rotateCorousel = (array) => {
+const rotateCorousel = (array) => {
   let left = `translate3d(-60%, 0, -220px)`;
   let right = `translate3d(60%, 0, -220px)`;
   let middle = `translate3d(0, 0, 0)`;
@@ -92,19 +94,19 @@ projects.forEach(function (project, index) {
 
 //Mobile Carousel and Hamburger Menu
 
-mobileCorousel = (array) => {
+const mobileCorousel = (array) => {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  swipeStart = (e) => {
+  const swipeStart = (e) => {
     touchStartX = e.changedTouches[0].screenX;
   };
 
-  swipeMove = (e) => {
+  const swipeMove = (e) => {
     touchEndX = e.changedTouches[0].screenX;
   };
 
-  swipeEnd = () => {
+  const swipeEnd = () => {
     if (touchEndX === 0) {
       return;
     }
@@ -134,7 +136,7 @@ mobileCorousel = (array) => {
   projectContainer.addEventListener("touchend", swipeEnd, false);
 };
 
-toggleMenu = () => {
+const toggleMenu = () => {
   const hamburger = document.querySelector(".hamburger-menu");
   const menu = document.querySelector(".hamburger-navbar");
   menu.classList.toggle("active");
