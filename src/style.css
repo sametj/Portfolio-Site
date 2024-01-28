@@ -125,10 +125,6 @@ img {
   border-radius: 30px;
   transform-style: preserve-3d;
   transition: transform 1s ease-out;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .landing-page-title {
