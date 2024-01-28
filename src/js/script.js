@@ -39,8 +39,8 @@ experience.addEventListener("mouseleave", function () {
 const tilt = (container, e) => {
   const tiltX =
     (container.offsetWidth / 2 - (e.pageX - container.offsetLeft)) / 20;
-  const tiltY = (container.offsetHeight / 2 - e.pageY) / 20;
-  console.log(container.offsetTop);
+  const tiltY =
+    (container.offsetHeight / 2 - (e.pageY - container.offsetTop)) / 60;
 
   // Apply the tilt effect using the transform property
   container.style.transform = `rotateX(${tiltY}deg) rotateY(${-tiltX}deg)`;
