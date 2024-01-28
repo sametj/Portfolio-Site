@@ -6,6 +6,7 @@ const projects = document.querySelectorAll(".project");
 const projectContainer = document.querySelector(".projects-container");
 const experience = document.querySelector(".experience");
 const activeProject = document.querySelector(".active");
+const hamburger = document.querySelector(".hamburger-menu");
 
 let currentIndex = 0;
 
@@ -148,5 +149,7 @@ const toggleMenu = () => {
     hamburger.innerHTML = `<i class="fa-solid fa-bars fa-2xl"></i>`;
   }
 };
+
+hamburger.addEventListener("click", toggleMenu);
 
 mobileCorousel(projects);

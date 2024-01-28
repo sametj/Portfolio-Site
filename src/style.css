@@ -366,6 +366,8 @@ li {
   }
   .hamburger-menu {
     display: block;
+    z-index: 2;
+    color: white;
   }
 
   .navbar {
@@ -384,6 +386,7 @@ li {
   }
 
   .fa-github {
+    color: white;
     margin: 10px;
     font-size: 2.5rem;
   }
