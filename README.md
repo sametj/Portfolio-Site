@@ -1,6 +1,6 @@
 ## My Portfolio Site
  My  3D like personal portfolio website, built using my imagination and creativity and proud of what I was able to create!
-Link: https://temitope-moses-james-portfolio.netlify.app
+Link: (https://mosesjamesporfolio.netlify.app)
 ![image](https://github.com/sametj/Portfolio-Site/assets/102891262/df47e631-2e59-47c9-8dbd-dbcf305ecb56)
 
 
