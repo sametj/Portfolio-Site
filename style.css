@@ -14,11 +14,10 @@ section {
 
 body {
 	overflow-x: hidden;
-	max-height: 500vh;
+	height: 500vh;
 	padding: 20px;
 	background: linear-gradient(#6f848b, beige);
 	background-repeat: no-repeat;
-	height: 100%;
 }
 
 body::-webkit-scrollbar {
